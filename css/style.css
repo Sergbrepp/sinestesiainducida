@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&family=Sedgwick+Ave+Display&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+/* COLORES Y TAMAÑOS DE LETRAS PRINCIPALES DE PAGINA */
+:root{
+    --colorPrincipal: #5f5cf4;
+    --colorTexto: #fff;
+    --colorFondo: #151313;
+    --fuenteGrande: 3rem; /* TAMAÑO LETRA 2 SINEINDU */
+    --fuente-h2: 1.5rem; /* TAMAÑO LETRA SOMOS SINEINDU */
+    --fuente-p: 0.9rem;
+}
+
+*::selection{
+    background: var(--colorPrincipal);
+    color: #fff;
+}
+
+body{
+    color: var(--colorTexto);
+    background: var(--colorFondo);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 160px;
+    background-color: var(--colorFondo);
+
+}
+
+.logo{
+    color: var(--colorPrincipal);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navegacion{
+    display: flex;
+}
+
+.navegacion a{
+    color: var(--colorTexto);
+    font-size: 1rem;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.navegacion a:hover{
+    color: var(--colorPrincipal);
+    transition: .4s;
+}
+
+#icono-menu{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+section{
+    padding: 95px 13%;
+}
+
+
+/* 1RA PAG 
+INICIO */
+.inicio{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+}
+/* TAMAÑO Y POSICION IMAGEN INICIO */
+.img-inicio img{
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+}
+/* TAMAÑO Y COLOR DEL TEXTO GRANDE */
+.txt-inicio h1{
+    font-size: var(--fuenteGrande);
+    color: var(--colorPrincipal);
+}
+/* TAMAÑO DEL SUBTEXTO */
+.txt-inicioc h2{
+    font-size: var(--fuente-h2);
+    margin: 1rem 0 2rem;
+}
+/* BOTON VER */
+.boton{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--colorPrincipal);
+    color: #fff;
+    border-radius: .5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.boton:hover{
+    transform: scale(1.1) translateY(10px);
+    transition: .4s ease-in-out;
+}
+
+
+/* 2DA PAG
+SOBRE NOSOTROS */
+.sobreNosotros{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 2.5rem;
+    align-items: center;
+}
+/* TAMAÑO Y POSICION IMAGEN SOBRE NOSOTROS */
+.sobreN-img img{
+    max-width: 105%;
+    width: 700px;
+    height: auto;
+}
+/* TEXTO SOBRE NOSOTROS */
+.sobreN-txt span{
+    color: var(--colorPrincipal);
+    font-weight: bold;
+}
+/* TEXTO SOMOS SINESTESIA INDUCIDA */
+.sobreN-txt h2{
+    font-size: var(--fuente-h2);
+}
+/* TEXTO DESCRIPCION */
+.sobreN-txt p{
+    margin: .8rem 0 1.8rem;
+    
+}
+
+
+/* 3RA SECCION SERVICIOS - 3 CARTAS CON IMAGENES */
+/* TITULO CENTRADO */
+.titulo{
+    text-align: center;
+}
+/* COLOR DEL TITULO */
+.titulo span{
+    color: var(--colorPrincipal);
+    font-weight: bold;
+}
+/* SUBTITULO */
+.titulo h2{
+    font-size: var(--fuente-h2);
+}
+/* CENTRADO DE LOS TRES TITULOS */
+.contenedor-servicios{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 3rem;
+    align-items: center;
+}
+/* MODELADO DE 3 CARTAS, COLOR Y TAMAÑO */
+.contenido{
+    position: relative;
+    margin-top: 3rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #d4c5be;
+    padding: 10px;
+    border-radius: 1.5rem;
+}
+/* TAMAÑO DE LAS 3 IMAGENES */
+.contenido-img{
+    width: 220px;
+    height: 220px;
+}
+
+.contenido-img img{
+    width: 100%;
+    height: 100%;
+}
+/* SUBTITULO H2 COLOR Y TAMAÑO FUENTE */
+.contenido h2{
+    font-size: 1.5rem;
+    color: var(--colorFondo);
+}
+/* SEGUNDO SUBTITULO H3 COLOR Y TAMAÑO FUENTE */
+.contenido h3{
+    color: var(--colorFondo);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 4px 0 10px;
+}
+/* TITULO FINAL - PANTALLA ETC - COLOR Y TAMAÑO FUENTE */
+.contenido span{
+    font-size: var(--fuente-p);
+    color: var(--colorPrincipal);
+    font-weight: bold;
+}
+/* MODELADO DE ICONOS, POSICION Y COLOR */
+.contenido i{
+    background: var(--colorPrincipal);
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 7px 10px;
+    border-radius: 0 .7rem 0 .7rem;
+}
+
+
+/* 4TA SECCION - 3 PRODUCCIONES */
+.contenedor-producciones{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.producciones{
+    text-align: center;
+    padding: 20px 30px;
+}
+/* TAMAÑO DE LAS 3 IMAGENES */
+.producciones img{
+    width: 220px;
+}
+/* TAMAÑO Y COLOR TITULO DE CADA PRODUCCION */
+.producciones h3{
+    margin: 4px 0 10px;
+    color: var(--colorPrincipal);
+    font-size: 1.3rem;
+}
+/* TAMAÑO DE LOREM PRODUCCIONES */
+.producciones p{
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+
+/* 5TA SECCION CARTA PRESUPUESTO */
+.cta{
+    background: #feeee7;
+    padding: 40px 0;
+    text-align: center;
+    width: 50%;
+    margin: 100px auto;
+    border-radius: 50px;
+}
+/* TEXTO Y ANIMACION BOTON */
+.cta h2{
+    font-size: 2rem;
+    color: var(--colorFondo);
+    margin-bottom: 10px;
+}
+
+
+/* 6TA SECCION - CONTENIDO FINAL CONTACTO*/
+.contenidoFinal{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer{
+    padding: 10px 0;
+}
+
+.Links{
+    width: 25%;
+
+}
+/* COLOR Y TAMAÑO DE LOS TITULOS DEL CONTENIDO FINAL */
+.Links h4{
+    font-size: 1.2rem;
+    color: var(--colorPrincipal);
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.Links h4::before{
+    content: " "; /* SUBRAYADO */
+    position: absolute;
+    font-size: 1.2rem;
+    color: var(--colorTexto);
+    height: 2px;
+    width: 50px;
+    left: 0;
+    bottom: -8px;
+    background-color: var(--colorPrincipal);
+}
+
+
+/* COLOR Y TAMAÑO DE SUBTITULOS */
+.Links ul li:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.Links ul li a{
+    color: #9897a9;
+    font-size: 1.1rem;
+    display: block;
+    text-transform: capitalize;
+    transition: .4s;
+    font-weight: 600;
+}
+
+.Links ul li a:hover{
+    color: var(--colorTexto);
+    transform: translateX(-10px);
+}
+
+
+/* ICONOS REDES */
+.Links .redes{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* ICONOS REDES TAMAÑOS Y COLORES */
+.Links .redes a{
+    height: 50px;
+    width: 50px;
+    background-color: var(--colorTexto);
+    color: var(--colorFondo);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    transition: .4s;
+}
+/* ICONOS REDES TRANSFORM */
+.Links .redes a:hover{
+    transform: scale(1.2);
+    color: var(--colorFondo);
+    background: var(--colorPrincipal);
+}
+
+
+/* RESPONSIVE FORMATO */
+@media (max-width: 1560px){
+    header{
+        padding: 10px 50px;
+    }
+}
+
+@media (max-width: 1140px){
+    section{
+        padding: 50px;
+
+    }
+
+    #icono-menu{
+        display: initial;
+        color: var(--colorTexto);
+
+    }
+
+    header .navegacion{
+        position: absolute;
+        top: -400px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #151313;
+        transition: .4s;
+    }
+
+    header .navegacion.active{
+        top: 70px;
+    }
+
+    .navegacion a{
+        padding: 1.5rem;
+        display: block;
+    }
+
+    .Links{
+        width: 200px;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 720px){
+
+    header{
+        padding: 10px 16px;
+    }
+
+    .inicio ,
+    .sobreNosotros{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .sobreN-img{
+        order: 2;
+    }
+
+    section{
+        padding: 100px 7%;
+    }
+}
+
+@media (max-width: 575px){
+    .Links{
+        width: 100%;
+    }
+}
